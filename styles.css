@@ -1,35 +1,71 @@
+/*I learned how to make the following code by using Leanne R's Tutorial on youtube.*/
+:root {
+--mint-cream: #f0f7ee;
+--pale-sky: #c4d7f2;
+--frosted-blue: #afdedc;
+--ash-grey: #91a8a4;
+--dim-grey: #776871;
+}
+
+/**/
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html,body { height: 100%; }
 
 body {
-background: #f0e7f0;
+background-color: var(--mint-cream);
+background-image: radial-gradient(
+var(--mint-cream),
+var(--pale-sky),
+var(--frosted-blue),
+var(--ash-grey),
+var(--dim-grey)
+);
+
+min-height: 100vh;
+background-size: 500% 500%;
+animation: move 5s alternate infinite;
+
 font-family: Arial, Helvetica, sans-serif;
 padding: 28px 16px;
 display: flex;
 flex-direction: column;
 align-items: center;
-color: #111;
+color: #000000;
+}
+
+@keyframes move {
+from {
+background-position: 0%
+}
+to {
+background-position: 100% 100%
+}
 }
 
 h1 {
-  font-size: 34px;
-  font-weight: 700;
-  text-align: center;
-  margin: 10px 0 18px 0;
-  color: #000;
+font-size: 60px;
+font-weight: 700;
+text-align: center;
+margin-bottom: 60px;
+color: #000;
+max-width: #fff;
+background: #fff;
+border-radius: 25px;
+padding: 20px;
+box-shadow: 0 16px 16px 16px rgba(0, 0, 0, 0.50)
 }
 
 
 hr {
-  border: none;
-  height: 1px;
-  background: #e0dfe8;
-  margin: 12px 0;
+border:rgba(0, 0, 0, 0.06);
+height: 1px;
+background: #000000;
+margin: 12px 0;
+text-align: center;
 }
 
 .container {max-width: 920px; width: 100%;}
-
-
 
 .about,
 .skills,
@@ -37,19 +73,21 @@ hr {
 .aff,
 .chart,
 .pastProjects {
-  width: 100%;
-  max-width: #fff;
-  background: #fff;
-  border: 1px solid #e6e6e8;
-  padding: 16px;
-  margin-bottom: 18px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04)
+font-size: 25px;
+width: 100%;
+text-align: center;
+max-width: #fff;
+background: #fff;
+border-radius: 25px;
+padding: 10px;
+margin-bottom: 60px;
+box-shadow: 0 16px 16px 16px rgba(0, 0, 0, 0.50)
 }
 
 .about h2, .skills h2, .proj h3, .aff h3, .chart h3, .pastProjects h2 {
-  margin-bottom: 10px;
-  color: #222;
-  font-size: 18px;
+margin-bottom: 10px;
+color: #222;
+font-size: 35px;
 }
 
 .about {text-align: center;}
@@ -62,39 +100,37 @@ hr {
 .proj img,
 .aff img,
 .chart img {
-  display: block;
-  width: 100%;
-  max-width: 640px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-  object-fit: cover;
+display: block;
+width: 100%;
+max-width: 640px;
+height: auto;
+border-radius: 25px;
+box-shadow: 0 30px 30px rgba(0, 0, 0, 0.06);
+object-fit: cover;
 }
 
 .pastProjects a {
-  color: #1166cc;
-  text-decoration: none;
-  font-weight: 600;
+color: #1166cc;
+text-decoration: none;
+font-weight: 600;
 }
 
 .pastProjects a:hover {text-decoration: underline;}
 .pastProjects p {color: #333; margin: 8px 0 12px 0;}
 
 .problem {
-  display: inline-block;
-  background: #111;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 8px;
-  max-width: 100%;
+display: block;
+background: #111;
+color: #000000;
+padding: 10px 14px;
+border-radius: 25px;
+max-width: 100%;
 }
 
 .proj p, .aff p, .chart p {color: #444; line-height: 1.5;}
 
-[class^="aff"] {}
-
 @media (max-width: 720px) {
-  body { padding: 18px 10px;}
-  h1 {font-size: 28px; margin-top: 6px;}
-  .proj img, .aff img, .chart, img {max-width: 100%;}
+body { padding: 18px 10px;}
+h1 {font-size: 28px; margin-top: 6px;}
+.proj img, .aff img, .chart, img {max-width: 100%;}
 }
