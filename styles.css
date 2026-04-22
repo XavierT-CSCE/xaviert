@@ -99,6 +99,8 @@ font-size: 35px;
 .aff img,
 .chart img {
 display: block;
+margin-left: auto;
+margin-right: auto;
 width: 100%;
 max-width: 640px;
 height: auto;
@@ -125,7 +127,7 @@ border-radius: 25px;
 max-width: 100%;
 }
 
-.proj p, .aff p, .chart p {color: #444; line-height: 1.5;}
+.proj p, .aff p, .chart p {color: #444; line-height: 2.0;}
 
 @media (max-width: 720px) {
 body { padding: 18px 10px;}
